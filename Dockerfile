@@ -13,3 +13,5 @@ WORKDIR /var/www
 RUN composer install --no-dev --optimize-autoloader
 
 RUN rm -rf /var/www/html && ln -s /var/www/public /var/www/html
+
+COPY .env /var/www/.env
