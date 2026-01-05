@@ -1,6 +1,15 @@
 FROM php:8.2-apache
+
 RUN a2enmod rewrite
+
 RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
-COPY public/ /var/www/html/
-COPY views/ /var/www/views/ 
-COPY src/ /var/www/src/ 
+
+RUN apt-get update && apt-get install -y unzip git curl \
+  && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+COPY . /var/www
+
+WORKDIR /var/www
+RUN composer install --no-dev --optimize-autoloader
+
+RUN rm -rf /var/www/html && ln -s /var/www/public /var/www/html
