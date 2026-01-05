@@ -4,5 +4,3 @@ RUN sed -i 's/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 COPY public/ /var/www/html/
 COPY views/ /var/www/views/ 
 COPY src/ /var/www/src/ 
-COPY config/ /var/www/config/ 
-COPY vendor/ /var/www/vendor/ 
