@@ -13,9 +13,9 @@ class Database
 
     public function __construct()
     {
-        $host = 'localhost';
-        $db = 'rapi';
-        $user = 'root';
+        $host = 'db4free.net';
+        $db = 'reservationapi';
+        $user = 'reservationapi';
         $pass = $_ENV['DB_PASS'];
         $charset = 'utf8mb4';
         $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
