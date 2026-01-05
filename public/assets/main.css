@@ -1,0 +1,17 @@
+.logout-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.auth-form-container {
+  width: 300px;
+}
+
+@media (min-width: 576px) {
+  .auth-form-container {
+    width: 400px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
