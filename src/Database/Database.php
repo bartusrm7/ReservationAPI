@@ -13,18 +13,11 @@ class Database
 
     public function __construct()
     {
-        $host = getenv('DB_HOST');
-        $db   = getenv('DB_NAME');
-        $user = getenv('DB_USER');
-        $pass = getenv('DB_PASS');
-        $port = getenv('DB_PORT') ?: 3306;
-        $charset = 'utf8mb4';
-        $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
-
+        $url = getenv('DATABASE_URL');
         $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, PDO::ATTR_EMULATE_PREPARES => false];
 
         try {
-            $this->pdo = new PDO($dsn, $user, $pass, $options);
+            $this->pdo = new PDO($url, null, null, $options);
         } catch (PDOException $err) {
             die('Database error: ' . $err->getMessage());
         }
