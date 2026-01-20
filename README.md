@@ -5,7 +5,7 @@
 The app includes registration and login, with separate access for business and customer accounts. Business users can manage and edit meeting details.
 
 #### 2. Registration
-<img src="public/assetsZrzut ekranu 2026-01-19 141351.png" width="100%" /> 
+<img src="public/assets/Zrzut ekranu 2026-01-19 141351.png" width="100%" /> 
 
 #### 3. Login
 <img src="/work-tracker-frontend/src/assets/Zrzut ekranu 2026-01-19 141410.png" width="100%" /> 
