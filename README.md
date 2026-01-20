@@ -5,7 +5,7 @@
 The app includes registration and login, with separate access for business and customer accounts. Business users can manage and edit meeting details.
 
 #### 1. Registration
-<img src="public/assets/Zrzut ekranu 2026-01-19 141351.png" width="100%" height="300px"/> 
+<img src="public/assets/Zrzut ekranu 2026-01-19 141351.png" width="500px" height="300px"/> 
 
 #### 2. Login
 <img src="public/assets/Zrzut ekranu 2026-01-19 141410.png" width="100%" /> 
